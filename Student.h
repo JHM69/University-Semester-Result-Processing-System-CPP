@@ -2,9 +2,6 @@
 // Created by Jahangir Hossain on 24-Jan-21.
 //
 
-#ifndef SEMESTER_RESULT_PROCESSING_SYSTEM_B190305009_STUDENT_H
-#define SEMESTER_RESULT_PROCESSING_SYSTEM_B190305009_STUDENT_H
-
 #include <istream>
 
 using namespace std;
