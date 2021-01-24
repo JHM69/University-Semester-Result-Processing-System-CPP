@@ -1,8 +1,9 @@
 # University-Semester-Result-Processing-System-CPP
-Assignment 
+## Assignment 
 
-
+```
 Class Student
+
 Data Members
 Name
 ID
@@ -69,3 +70,4 @@ CSE1107 (3.0)
 CSE1108 (1.0)
 CSE1109 (3.0)
 CSE1111 (3.0)
+```
