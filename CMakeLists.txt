@@ -1,0 +1,6 @@
+cmake_minimum_required(VERSION 3.17)
+project(Semester_Result_Processing_System_B190305009)
+
+set(CMAKE_CXX_STANDARD 14)
+
+add_executable(Semester_Result_Processing_System_B190305009 main.cpp)
