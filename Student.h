@@ -8,6 +8,7 @@
 #include <istream>
 
 using namespace std;
+
 #include <bits/stdc++.h>
 #include "Course.h"
 
@@ -15,17 +16,16 @@ class Student {
     string Name;
     int ID;
     Course courseList[8] = {};
-    double TGP=0;
-    double GPA=0;
+    double TGP = 0;
+    double GPA = 0;
     string LG;
-    double TCP=0; //input as a constant default value
-    double ECP=0;
+    double TCP = 0; //input as a constant default value
+    double ECP = 0;
     bool failedAtLeastOneSubject = false;
     string Result; //Value will be “Promoted”, “Conditionally Promoted” or “Not Promoted”
 
 public:
     Student() {
-
     }
 
     void set() {
@@ -58,19 +58,19 @@ public:
     void DisplayResult() {
         cout << "Student's name:- " << Name << endl;
         cout << "Student's ID:- " << ID << endl;
-        for(int i = 0; i < 8; i++) {
+        for (int i = 0; i < 8; i++) {
             cout << courseList[i].Marks << endl;
             cout << courseList[i].getGradePoint() << endl;
             cout << courseList[i].getLetterGrade() << endl;
             cout << courseList[i].passed << endl;
             cout << "--------------------" << endl;
         }
-        cout << "Total Grade Point: "<< CalculateTGP() << endl;
-        cout << "Total Grade Point Average: "<< CalculateGPA() << endl;
-        cout << "Letter Grade: "<< CalculateLG() << endl;
-        cout << "Total Credit Point: "<< CalculateTCP() << endl;
-        cout << "Total Earned Credit Point: "<< CalculateECP() << endl;
-        cout << "Comment: "<< CalculateResult() << endl;
+        cout << "Total Grade Point: " << CalculateTGP() << endl;
+        cout << "Total Grade Point Average: " << CalculateGPA() << endl;
+        cout << "Letter Grade: " << CalculateLG() << endl;
+        cout << "Total Credit Point: " << CalculateTCP() << endl;
+        cout << "Total Earned Credit Point: " << CalculateECP() << endl;
+        cout << "Comment: " << CalculateResult() << endl;
     }
 
     double CalculateTGP() {
@@ -90,18 +90,18 @@ public:
     }
 
     double CalculateTCP() {
-        TCP=0;
-        for(int i = 0; i < 8; i++) {
+        TCP = 0;
+        for (int i = 0; i < 8; i++) {
             TCP += courseList[i].Credit;
         }
         return TCP;
     }
 
     double CalculateECP() {
-        ECP=0;
-        for (int i = 0; i<8; i++) {
-            if(courseList[i].passed){
-                ECP+=courseList[i].Credit;
+        ECP = 0;
+        for (int i = 0; i < 8; i++) {
+            if (courseList[i].passed) {
+                ECP += courseList[i].Credit;
             }
         }
         return ECP;
@@ -110,11 +110,11 @@ public:
 
 
     string CalculateResult() {
-        if(GPA<2){
+        if (GPA < 2) {
             Result = "Not Promoted";
-        }else if(GPA >= 2.0 && failedAtLeastOneSubject){
+        } else if (GPA >= 2.0 && failedAtLeastOneSubject) {
             Result = "Conditionally Promoted";
-        }else{
+        } else {
             Result = "Promoted";
         }
         return Result;
@@ -127,25 +127,25 @@ Else “Promoted”
 
 
     string CalculateLG() {
-        if(GPA==4){
+        if (GPA == 4) {
             LG = "A+";
-        }else if(GPA>=3.75 && GPA <=3.99){
+        } else if (GPA >= 3.75 && GPA <= 3.99) {
             LG = "A";
-        }else if(GPA>=3.5 && GPA <=3.74){
+        } else if (GPA >= 3.5 && GPA <= 3.74) {
             LG = "A-";
-        }else if(GPA>=3.25 && GPA <=3.49){
+        } else if (GPA >= 3.25 && GPA <= 3.49) {
             LG = "B+";
-        }else if(GPA>=3 && GPA <=3.24){
+        } else if (GPA >= 3 && GPA <= 3.24) {
             LG = "B";
-        }else if(GPA>=2.75 && GPA <=2.99){
+        } else if (GPA >= 2.75 && GPA <= 2.99) {
             LG = "B-";
-        }else if(GPA>=2.5 && GPA <=2.74){
+        } else if (GPA >= 2.5 && GPA <= 2.74) {
             LG = "C+";
-        }else if(GPA>=2.25 && GPA <=2.49){
+        } else if (GPA >= 2.25 && GPA <= 2.49) {
             LG = "C";
-        }else if(GPA>=2 && GPA <=2.24){
+        } else if (GPA >= 2 && GPA <= 2.24) {
             LG = "D";
-        }else if(GPA < 2){
+        } else if (GPA < 2) {
             LG = "F";
         }
         return LG;

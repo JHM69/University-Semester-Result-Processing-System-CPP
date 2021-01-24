@@ -4,8 +4,11 @@
 
 #ifndef SEMESTER_RESULT_PROCESSING_SYSTEM_B190305009_COURSE_H
 #define SEMESTER_RESULT_PROCESSING_SYSTEM_B190305009_COURSE_H
+
 #include <istream>
+
 using namespace std;
+
 #include <bits/stdc++.h>
 
 
@@ -15,9 +18,10 @@ class Course {
 
 
 public:
-    bool passed=true;
+    bool passed = true;
     long Marks;
     double Credit;
+
     Course(long Marks) {
         Marks = Marks;
     }
@@ -60,6 +64,7 @@ public:
         }
         return lg;
     }
+
     double getGradePoint() {
         if (Marks >= 80 && Marks <= 100) {
             CourseGP = 4.0;
