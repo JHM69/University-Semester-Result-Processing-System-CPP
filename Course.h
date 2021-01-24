@@ -2,9 +2,6 @@
 // Created by Jahangir Hossain on 24-Jan-21.
 //
 
-#ifndef SEMESTER_RESULT_PROCESSING_SYSTEM_B190305009_COURSE_H
-#define SEMESTER_RESULT_PROCESSING_SYSTEM_B190305009_COURSE_H
-
 #include <istream>
 
 using namespace std;
@@ -94,5 +91,3 @@ public:
     Course() {
     }
 };
-
-#endif //SEMESTER_RESULT_PROCESSING_SYSTEM_B190305009_COURSE_H
