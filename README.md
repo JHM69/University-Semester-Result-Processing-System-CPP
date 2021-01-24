@@ -71,3 +71,6 @@ CSE1108 (1.0)
 CSE1109 (3.0)
 CSE1111 (3.0)
 ```
+### Sample Data and Output
+![GitHub Logo](/sample_data.JPG)
+
