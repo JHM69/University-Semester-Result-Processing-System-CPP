@@ -12,16 +12,11 @@ using namespace std;
 class Course {
     int CourseID;
     double CourseGP;
-
-
 public:
     bool passed = true;
     long Marks;
     double Credit;
 
-    Course(long Marks) {
-        Marks = Marks;
-    }
 
     void set() {
         cout << "Enter Course's ID:- ";

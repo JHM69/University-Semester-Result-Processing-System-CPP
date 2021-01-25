@@ -3,10 +3,7 @@
 //
 
 #include <istream>
-
 using namespace std;
-
-#include <bits/stdc++.h>
 #include "Course.h"
 
 class Student {
@@ -34,7 +31,7 @@ public:
             cout << "Enter Marks for Course:- " << i + 1 << endl;
             int m;
             cin >> m;
-            Course c = Course(m);
+            Course c = Course();
             c.Marks = m;
             courseList[i] = c;
             initializeCreditPoint();
@@ -144,6 +141,7 @@ Else “Promoted”
             LG = "D";
         } else if (GPA < 2) {
             LG = "F";
+            failedAtLeastOneSubject=true;
         }
         return LG;
 
